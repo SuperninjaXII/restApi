@@ -1,19 +1,76 @@
-# README
+# Project Name
 
-## About
+A desktop application built with Wails and Go.
 
-This is the official Wails Vanilla template.
+## Prerequisites
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+Before you begin, ensure you have the following installed:
 
-## Live Development
+- [Go](https://golang.org/doc/install) (1.23 or later)
+- [Wails](https://wails.io/docs/gettingstarted/installation)
+- [Node.js](https://nodejs.org/) (For frontend development)
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+## Getting Started
+
+### System Check
+
+First, verify your system meets all requirements by running:
+
+```bash
+wails doctor
+```
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone [your-repository-url]
+cd [project-directory]
+```
+
+2. Install dependencies:
+
+```bash
+go mod tidy
+```
+
+### Development
+
+To start the development server:
+
+```bash
+wails dev
+```
+
+This will:
+
+- Start the backend server
+- Launch the frontend development environment
+- Enable hot-reloading for both frontend and backend changes
 
 ## Building
 
-To build a redistributable, production mode package, use `wails build`.
+To build the production version:
+
+```bash
+wails build
+```
+
+The compiled application will be available in the `build` directory.
+
+## Project Structure
+
+```
+├── frontend/         # Frontend source code
+├── main.go          # Application entry point
+└── wails.json       # Wails configuration file
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
